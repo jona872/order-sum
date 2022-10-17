@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /* ### Primary */
+    --pBlue: hsl(225, 100%, 94%);
+    --bBlue: hsl(245, 75%, 52%);
+
+    /* ### Neutral */
+    --vpBlue: hsl(225, 100%, 98%);
+    --desBlue: hsl(224, 23%, 55%);
+    --dblue: hsl(223, 47%, 23%);
+    --buttonHover: hsla(245, 50%, 52%, 1);
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    background-color: var(--pBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: white;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card--img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card--img>img {
+    width: 100%;
+}
+
+.card--body {
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card--body>h1 {
+    color: var(--dblue);
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.card--body>p {
+    font-size: 1.07rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--desBlue);
+    margin: 18px 0px;
+    
+}
+
+.card--detail {
+    background-color: var(--vpBlue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    border-radius: 1rem;
+}
+
+.plan {
+    font-size: 1rem;
+    line-height: 0.5rem;
+}
+
+.plan-bold {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--dblue);
+}
+
+.plan-normal {
+    font-size: 1.1rem;
+    color: var(--desBlue);
+    margin-top: 18px;
+}
+
+@media (min-width: 360px) {
+    .card--detail {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .card--detail>div:nth-child(1) {
+        min-width: 20%;
+    }
+
+    .card--detail>div:nth-child(2) {
+        min-width: 60%;
+        text-align: left;
+        margin-left: 4%;
+    }
+
+    .card--detail>div:nth-child(3) {
+        width: 20%;
+    }
+}
+
+.card--detail--button {
+    width: 100%;
+    height: 48px;
+    border-radius: 0.7rem;
+    background-color: var(--bBlue);
+    color: var(--pBlue);
+
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.card--detail--button:hover {
+    background-color: var(--buttonHover);
+    cursor: pointer;
+}
+
+.card--detail--cancel {
+    color: var(--desBlue);
+    font-weight: 700;
+    margin-top: 37px;
+    font-size: 1.05rem;
+}
+
+.card--detail--cancel:hover {
+    color: var(--dblue);
+}
+
+
+.card--detail--change {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--bBlue);
+    text-decoration: underline;
+}
+
+.card--detail--change:hover {
+    color: var(--buttonHover);
+}
